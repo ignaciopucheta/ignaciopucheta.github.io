@@ -129,6 +129,10 @@ footer nav .redes-sociais li{
 
 footer nav .redes-sociais li a img{
     width: 40px;
+    transition: .2s;
+}
+footer nav .redes-sociais li a:hover img{
+    transform: scale(1.2) translateY(-10px);
 }
 
 
@@ -137,7 +141,7 @@ main .coluna{
     padding: 20px;
 }
 main .coluna section{
-    border-bottom: 1px solid #d4e9ff;
+    border-bottom: 1px solid lightgray;
     margin: 0 0 20px;
     min-height: 187px;
     color:var(--corTextoSecudaria);
@@ -192,13 +196,13 @@ label span{
     width: 20px;
     height: 20px;
     display: block;
-    background-color: #d4e9ff;
+    background-color: lightgray;
     border-radius: 100%;
     transition: all ease .3s;
 }
 
 .ativar-dark:checked ~ .dark-mode label{
-    background-color: #d4e9ff;
+    background-color: lightgray;
 }
 .ativar-dark:checked ~ .dark-mode label span{
     background-color: var(--corBackgroundSecundaria);
@@ -302,7 +306,7 @@ label span{
         right: -2px;
         animation-name: aumentarLargura, aumentarAltura;
         animation-duration: 1s, 1s;
-        animation-delay: 4s, 5s;
+        animation-delay: 2s, 3s;
         animation-fill-mode: forwards;
         border-bottom-color: lightgrey;
         border-left-color: lightgrey;
