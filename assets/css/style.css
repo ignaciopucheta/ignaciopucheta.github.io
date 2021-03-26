@@ -146,6 +146,20 @@ main .coluna section{
     min-height: 187px;
     color:var(--corTextoSecudaria);
 }
+main .barra{
+    color: black;
+    background-color: lightgray;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+}
+main .progress-bar{
+    display: inline-block;
+    background-color: black;
+    color: lightgray;
+    padding: 0.01em 1rem;
+    text-align: center;
+    border-radius: 1rem;
+}
 
 main .coluna section h2{
     font-size: 1.3rem;
@@ -229,6 +243,21 @@ label span{
 .ativar-dark:checked ~ .dark-mode main{
     background-color:var(--corBackgroundSecundaria) ;
 } 
+
+.ativar-dark:checked ~ .dark-mode main .barra{
+    color: lightgray;
+    background-color: lightgray;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+}
+.ativar-dark:checked ~ .dark-mode main .progress-bar{
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 0.01em 1rem;
+    text-align: center;
+    border-radius: 1rem;
+}
 
 @keyframes aumentarLargura{
     from{
