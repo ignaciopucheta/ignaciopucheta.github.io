@@ -58,6 +58,7 @@ body{
 /* HEADER */
 header{
     background-color: var(--corBackgroundPrimaria);
+    background-image: url(/assets/img/MTX01_0.jpg);
     padding: 30px 30px 0;
 }
 header .container{
