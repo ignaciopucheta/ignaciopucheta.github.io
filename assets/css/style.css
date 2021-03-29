@@ -341,8 +341,8 @@ label span{
         top: -2px;
         left: -2px;
         animation-name: aumentarLargura, aumentarAltura;
-        animation-duration: 1s, 1s;
-        animation-delay: 2s, 3s;
+        animation-duration: 10s, 10s;
+        animation-delay: 12s, 13s;
         animation-fill-mode: forwards;
         border-top-color: lightgrey;
         border-right-color: lightgrey;
@@ -351,8 +351,8 @@ label span{
         bottom: -2px;
         right: -2px;
         animation-name: aumentarLargura, aumentarAltura;
-        animation-duration: 1s, 1s;
-        animation-delay: 2s, 3s;
+        animation-duration: 10s, 10s;
+        animation-delay: 12s, 13s;
         animation-fill-mode: forwards;
         border-bottom-color: lightgrey;
         border-left-color: lightgrey;
