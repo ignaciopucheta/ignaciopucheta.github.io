@@ -200,8 +200,8 @@ label{
     position: absolute;
     top: 30px;
     right: 30px;
-    width: 52px;
-    height: 30px;
+    width: 60px;
+    height: 35px;
     background-color: var(--corBackgroundSecundaria);
     border-radius: 20px;
     padding: 5px 5px;
@@ -212,13 +212,14 @@ label span{
     width: 20px;
     height: 20px;
     display: block;
-    background-color: lightgray;
+    background-color: rgb(255, 251, 0);
     border-radius: 100%;
     transition: all ease .3s;
+    border: dashed;
 }
 
 .ativar-dark:checked ~ .dark-mode label{
-    background-color: lightgray;
+    background-color: var(--corTextPrimaria);
 }
 .ativar-dark:checked ~ .dark-mode label span{
     background-color: var(--corBackgroundSecundaria);
@@ -226,12 +227,23 @@ label span{
     transform: translateX(21px);
     transition: all ease .3s;
 }
+.ativar-dark:checked ~ .dark-mode .lua{
+    border-radius: 100%;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    top: -3px;
+    left: -2px;
+    content: "";
+    display: block;
+    background-color: var(--corTextPrimaria);
+}
 
 .ativar-dark:checked ~ .dark-mode{
     --corBackgroundPrimaria: #000;
     --corBackgroundSecundaria: #000;
-    --corTextPrimaria:#fff;
-    --corTextoSecudaria:#fff;
+    --corTextPrimaria:#70c007;
+    --corTextoSecudaria:#9edb4e;
 }
 .ativar-dark:checked ~ .dark-mode header{
     background-color:var(--corBackgroundSecundaria) ;
@@ -254,11 +266,14 @@ label span{
 }
 .ativar-dark:checked ~ .dark-mode main .progress-bar{
     display: inline-block;
-    background-color: white;
-    color: black;
+    background-color: var(--corTextPrimaria);
+    color: var(--corBackgroundPrimaria);
     padding: 0.01em 1rem;
     text-align: center;
     border-radius: 1rem;
+}
+.ativar-dark:checked ~ .dark-mode footer a{
+    color: var(--corTextPrimaria);
 }
 
 @keyframes aumentarLargura{
