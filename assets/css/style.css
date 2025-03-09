@@ -1,11 +1,4 @@
 /*
-Theme Name: Start sua carreira
-Theme URI: http://www.startsuacarreira.com.br
-Author: Kenzie Academy BR
-Author URI: https://kenzie.com.br;
-Description: Descrição do thema.
-Version: 1.0
-
 --------------------------------------------
 ESTRUTURA BASE
 --------------------------------------------
@@ -23,7 +16,7 @@ font-family: 'Open Sans', sans-serif;
 */
 
 /* ESTILOS GERAIS */
-html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, li, a, main{
+html, body, figure, img, div, input, textarea, p, p2, h1, h2, h3, h4, h5, h6, ul, li, a, main{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -39,7 +32,7 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, li
     --corBackgroundPrimaria: #3b3838;
     --corBackgroundSecundaria: #000000;
     --corBackgroundDark:#0e0e0e;
-    --corTextPrimaria:#636363;
+    --corTextPrimaria:#2c2b2b;
     --corTextoSecudaria:#000;
 
 }
@@ -89,6 +82,15 @@ header .coluna p{
     font-style: italic;
     padding-bottom: 10px;
 }
+header .coluna p2{
+    font-size: 0.85rem;
+    color:var(--corTextPrimaria);
+    font-family:  'Libre Baskerville', serif;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
 header .coluna ul{
     margin: 16px 0 0;
 }
@@ -170,8 +172,11 @@ main .coluna section h2{
 main .coluna section p{
     font-size: 0.9rem;
     color: var(--corTextPrimaria);
+    text-align: justify;
+    text-indent: 1.5em;
     line-height: 1.5;
 }
+
 
 main .coluna section ul li{
     margin: 0 0 12px;
