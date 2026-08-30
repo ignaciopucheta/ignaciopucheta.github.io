@@ -1,278 +1,390 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfólio::Ignacio Pucheta</title>
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-        <!--Link com  o arquivo css-->
-        <link rel="stylesheet" href="./assets/css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio::Ignacio Pucheta</title>
 
-    </head>
-    <body>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <!--Link com  o arquivo css-->
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-        <input type="checkbox" id="ativar-dark"  class="ativar-dark">
-        <div class="dark-mode">
-            <!-- CABEÇALHO -->
-            <header>
-                
-                <div class="container">
-                    <label for="ativar-dark">
-                        <span><div class="lua"></div></span></label>
-                    <div class="linha">
+</head>
 
-                        <!-- CAIXA FOTO DE PERFÍL -->
-                        <div class="coluna coluna-esquerda">
-                            <figure>
-                                <img src="assets/img/TRATADA.JPG" alt="Ignacio Pucheta">
-                                <figcaption class="hidden">Ignacio Pucheta</figcaption>
-                            </figure>
-                        </div>
+<body>
 
-                        <!-- INFORMAÇÕES PESSOAIS -->
-                        <div class="coluna coluna-direita">
+    <input type="checkbox" id="ativar-dark" class="ativar-dark">
+    <div class="dark-mode">
 
-                            <h1>Ignácio Agustín Acevedo Pucheta</h1>
-                            <p>Contador - CRC - SC-047034/0 </p>
+        <!-- MODAL DE BOAS-VINDAS -->
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+                <button class="modal-fechar" id="modalFechar" aria-label="Fechar">&times;</button>
+                <div class="modal-emoji">🏖️</div>
+                <h2 id="modalTitulo">Bem-vindo(a)!</h2>
+                <p>Você está acessando o meu portfólio, desenvolvido e atualizado por mim. Este espaço reúne um pouco da
+                    minha trajetória, dos projetos que desenvolvi e da forma como trabalho.</p>
+                <p>Toda crítica, sugestão ou comentário é muito bem-vindo. Se desejar compartilhar seu feedback, peço
+                    apenas que ele seja enviado por e-mail.</p>
+                <p class="modal-assinatura">Obrigado pela visita! 👊✌️</p>
+                <div class="modal-acoes">
+                    <a href="mailto:puchetagustin@icloud.com" class="modal-btn modal-btn-primario">Enviar feedback</a>
+                    <button class="modal-btn modal-btn-secundario" id="modalFecharBtn">Fechar</button>
+                </div>
+            </div>
+        </div>
 
-                            <li>
-                               <p2> Minha conduta profissional é pautada na integridade, ética e responsabilidade, garantindo excelência e transparência em cada ação.
+
+        <!-- CABEÇALHO -->
+        <header>
+
+            <div class="container">
+                <label for="ativar-dark">
+                    <span>
+                        <div class="lua"></div>
+                    </span></label>
+                <div class="linha">
+
+                    <!-- CAIXA FOTO DE PERFÍL -->
+                    <div class="coluna coluna-esquerda">
+                        <figure>
+                            <img src="assets/img/TRATADA.JPG" alt="Ignacio Pucheta">
+                            <figcaption class="hidden">Ignacio Pucheta</figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- INFORMAÇÕES PESSOAIS -->
+                    <div class="coluna coluna-direita">
+
+                        <h1>Ignácio Agustín Acevedo Pucheta</h1>
+                        <p>Contador - CRC-SC 047034/O-2</p>
+
+                        <li>
+                            <p2> Minha conduta profissional é pautada na integridade, ética e responsabilidade,
+                                garantindo excelência e transparência em cada ação.
                             </p2>
-                            </li>
+                        </li>
 
-                          
+
+                        <ul>
+                            <li>
+                                <a href="mailto:puchetagustin@icloud.com"><strong><span
+                                            style='font-size:20px;'>&#128231;</span> E-Mail: </strong>
+                                    puchetagustin@icloud.com</a>
+                            </li>
+                            <li>
+                                <a href="Tel:55048999823436"><strong><span
+                                            style='font-size:20px;'>&#128241;</span>Tel.:</strong> +55 (048) 9
+                                    9982-3436</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <main>
+
+            <div class="container">
+
+                <div class="linha">
+
+                    <!-- CONTEÚDO LADO ESQUERDO -->
+                    <div class="coluna coluna-esquerda">
+
+                        <section>
+                            <span class="topo-direita"></span>
+                            <h2>&#9997; Perfil Profissional</h2>
+                            <p> Por ser argentino, sou fluente em espanhol.
+                                Além disso, realizei diversos cursos de inglês e italiano,o que me permite comunicar-me
+                                com facilidade nessas línguas.
+                                Tenho uma grande capacidade de aprendizado e conhecimentos básicos em LIBRAS.
+                                Possuo boas habilidades de comunicação e relacionamento interpessoal, além de
+                                conhecimento avançado em informática, programação e administração.<br>
+                            </p>
+                            <p>Iniciei meus estudos na UFSC no curso de Engenharia Eletrônica, mas não me identifiquei
+                                com a área.
+                                Posteriormente, me formei em Ciências Contábeis pela Uniasselvi em 16/12/2023.
+                                Possuo registro ativo no CRC (Conselho Regional de Contabilidade), responsável por
+                                habilitar e fiscalizar o exercício da
+                                profissão contábil no Brasil, garantindo que o contador atue esteja em conformidade com
+                                as normas e regulamentos vigentes.
+
+                            </p>
+                            <p>
+                                Sou contador de formação, com atuação especializada na gestão dos setores de Recursos
+                                Humanos e Departamento Pessoal.
+                                Minha experiência abrange desde a administração de processos contábeis e fiscais até a
+                                liderança de iniciativas estratégicas de RH,
+                                como recrutamento, gestão de benefícios, folha de pagamento, conformidade trabalhista e
+                                desenvolvimento organizacional.
+                                Essa combinação de conhecimentos me permite agrupar a gestão de pessoas às melhores
+                                práticas financeiras e legais, promovendo
+                                soluções completas para o crescimento e sustentabilidade. Além disso, sou fundador da
+                                IAP Migração & Cia, consultoria
+                                especializada em regularização migratória Mercosul e internacionalização de negócios.
+                            </p>
+                            <span class="baixo-esquerda"></span>
+                        </section>
+
+                        <section>
+                            <span class="topo-direita"></span>
+                            <h2>&#127942; Cusos e Habilidades</h2>
+                            <ul>
+                                <li>Contabilidade &#10003;</li>
+                                <li>Gestão de Recursos Humanos &#10003;</li>
+                                <li>Departamento Pessoal &#10003;</li>
+                                <li>Recrutamento e Seleção &#10003;</li>
+                                <li>Conformidade Trabalhista &#10003;</li>
+                                <li>Desenvolvimento Organizacional &#10003;</li>
+                                <li>Administração e logística &#10003;</li>
+
+                                <li>Secretariado &#10003;</li>
+                                <li>Excel &#10003;</li>
+                                <li>Word &#10003;</li>
+                                <li>Power Point &#10003;</li>
+
+                                <li>Gestão em Marketing &#10003;</li>
+                                <li>Photoshop &#10003;</li>
+                                <li>Corel Draw &#10003;</li>
+
+                                <li>Programação &#10003;</li>
+
+                                <li>Informática - Basica e intermediaria &#10003;</li>
+                                <li>HTML 5 &#10003;</li>
+                                <li>CSS 3 &#10003;</li>
+                                <li>Java Script &#10003;</li>
+                                <li>Python &#10003;</li>
+                            </ul>
+                            <span class="baixo-esquerda"></span>
+                        </section>
+
+                        <section>
+                            <span class="topo-direita"></span>
+                            <h2>&#127919; Atividades e Interesses</h2>
+                            <ul>
+                                <li>Comércio Exterior &#10003;</li>
+                                <li>Internacionalização de Empresas &#10003;</li>
+                                <li>Automação Empresarial &#10003;</li>
+                                <li>Impressão 3D &#10003;</li>
+                                <li>Investimentos &#10003;</li>
+                                <li>Empreendedorismo &#10003;</li>
+                                <li>Idiomas e Culturas Internacionais &#10003;</li>
+                                <li>Tecnologia &#10003;</li>
+                                <li>Escotismo &#10003;</li>
+                                <li>Voluntariado &#10003;</li>
+                            </ul>
+                            <span class="baixo-esquerda"></span>
+                        </section>
+
+                    </div>
+
+                    <!-- CONTEÚDO LADO DIREITA -->
+                    <div class="coluna coluna-direita">
+
+                        <section>
+                            <span class="topo-direita"></span>
+                            <h2>&#128188; Principais Experiências</h2>
                             <ul>
                                 <li>
-                                    <a href="mailto:puchetagustin@gmail.com"><strong><span style='font-size:20px;'>&#128231;</span> E-Mail: </strong> puchetagustin@gmail.com</a>
+                                    <h3>&#128204;Contador - Gestão de Recursos Humanos & Departamento Pessoal </h3>
+                                    <strong>JOAQUIMCONTAP CONTABILIDADE - Atualmente</strong>
+                                <li>
+                                    <p>
+                                        Atualmente, sou responsável pela gestão completa dos setores de Recursos Humanos
+                                        e Departamento Pessoal, participando desde a atração de talentos até a
+                                        administração de folha de pagamento, benefícios e conformidade trabalhista.
+                                        Cuido do desenvolvimento organizacional, implementação de políticas internas e
+                                        acompanhamento de indicadores para garantir um ambiente de trabalho saudável e
+                                        produtivo.
+                                    </p>
+                                </li>
                                 </li>
                                 <li>
-                                    <a href="Tel:55048999823436"><strong><span style='font-size:20px;'>&#128241;</span>Tel.:</strong> +55 (048) 9 9982-3436</a>
-                                </li>                            
+                                    <h3>&#128204;Fundador e Consultor Empresarial</h3>
+                                    <strong>IAP MIGRAÇÃO & CIA - Atualmente</strong>
+                                <li>
+                                    <p>
+                                        Fundador de empresa especializada em consultoria migratória Mercosul,
+                                        internacionalização de negócios e suporte documental. Atuação em processos de
+                                        residência temporária e permanente, RNM/CRNM, apostilamento de documentos,
+                                        registro de marcas e assessoria para estrangeiros e empreendedores que desejam
+                                        atuar no Brasil e no Mercosul.
+                                    </p>
+                                </li>
+                                </li>
+                                <li>
+                                    <h3>&#128204;Recepcionista</h3>
+                                    <strong>HOTEL GAROPABA</strong>
+                                <li>
+                                    <p>Atendimento ao público, gestão de agenda e suporte administrativo na recepção do
+                                        hotel.</p>
+                                </li>
+                                </li>
+                                <li>
+                                    <h3>&#128204;Vendedor</h3>
+                                    <strong>BALI HOUSE</strong>
+                                <li>
+                                    <p>Atendimento, negociação e fechamento de vendas com foco em resultado.</p>
+                                </li>
+                                </li>
+                                <li>
+                                    <h3>&#128204;Garçom, Barista e Atendente</h3>
+                                    <strong>CAFETERIA E CASA DE CHÁ CARMELA</strong>
+                                <li>
+                                    <p>Atendimento ao cliente e preparo de alimentos, com foco em trabalho em equipe.
+                                    </p>
+                                </li>
+                                </li>
                             </ul>
+                            <span class="baixo-esquerda"></span>
+                        </section>
 
-                        </div>
-                    </div>
-                </div>
+                        <section>
+                            <span class="topo-direita"></span>
+                            <h2>&#127891; Educação</h2>
+                            <ul>
+                                <li>
+                                    <h3>MBA em Logística Internacional e Comércio Exterior</h3>
+                                    <strong>UNISUL - Universidade do Sul de Santa Catarina - Concluído</strong>
+                                <li>
+                                    <p>Pós-graduação com carga horária de 360 horas, realizada de agosto de 2025 a
+                                        dezembro de 2026.</p>
+                                </li>
+                                </li>
+                                <li>
+                                    <h3>Bacharel em Ciências Contábeis</h3>
+                                    <strong>UNIASSELVI - Centro Universitário Leonardo da Vinci</strong>
+                                <li>
+                                    <p>Conclusão: 2023 | Colação de Grau: 2024.</p>
+                                </li>
+                                </li>
+                                <li>
+                                    <h3>Certificações Relevantes</h3>
+                                    <strong>UNISUL</strong>
+                                <li>
+                                    <ul class="lista-certificacoes">
+                                        <li>Estratégia Empresarial</li>
+                                        <li>Gestão de Equipes de Alta Performance</li>
+                                        <li>Gestão Integrada da Cadeia de Suprimentos</li>
+                                        <li>Desenvolvimento de Fornecedores e Canais de Distribuição</li>
+                                        <li>Direito e Contratos Internacionais</li>
+                                        <li>Marketing e Posicionamento de Mercado</li>
+                                        <li>Operações de Exportação e Importação</li>
+                                    </ul>
+                                </li>
+                                </li>
+                                </li>
+                            </ul>
+                            <span class="baixo-esquerda"></span>
+                        </section>
 
-            </header>
+                        <section>
+                            <span class="topo-direita"></span>
+                            <h2>&#127760;Idiomas</h2>
+                            <ul>
+                                <li>
+                                    <h3>Espanhol <strong></strong></h3>
+                                    <div class="barra">
+                                        <div class="progress-bar" style="width:100%">Nativo</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3>Português <strong></strong></h3>
+                                    <div class="barra">
+                                        <div class="progress-bar" style="width:100%">Nativo</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3>Ingles <strong></strong></h3>
+                                    <div class="barra">
+                                        <div class="progress-bar" style="width:50%">Intermediario</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3>Italiano <strong></strong></h3>
+                                    <div class="barra">
+                                        <div class="progress-bar" style="width:50%">Intermediario</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h3>Libras <strong></strong></h3>
+                                    <div class="barra">
+                                        <div class="progress-bar" style="width:25%">Basico</div>
+                                    </div>
+                                </li>
 
-            <main>
-                
-                <div class="container">
-
-                    <div class="linha">
-
-                        <!-- CONTEÚDO LADO ESQUERDO -->
-                        <div class="coluna coluna-esquerda">
-                        
-                            <section>
-                                <span class="topo-direita"></span>
-                                <h2>&#9997; Perfil Profissional</h2>
-                                <p> Por ser argentino, sou fluente em espanhol. 
-                                    Além disso, realizei diversos cursos de inglês e italiano,o que me permite comunicar-me com facilidade nessas línguas. 
-                                    Tenho uma grande capacidade de aprendizado e conhecimentos básicos em LIBRAS.
-                                    Possuo boas habilidades de comunicação e relacionamento interpessoal, além de conhecimento avançado em informática, programação e administração.<br> 
-                                </p>
-                                <p>Iniciei meus estudos na UFSC no curso de Engenharia Eletrônica, mas não me identifiquei com a área. 
-                                    Posteriormente, me formei em Ciências Contábeis pela Uniasselvi em 16/12/2023. 
-                                    Possuo registro ativo no CRC (Conselho Regional de Contabilidade), responsável por habilitar e fiscalizar o exercício da 
-                                    profissão contábil no Brasil, garantindo que o contador atue esteja em conformidade com as normas e regulamentos vigentes.
-                                    
-                                </p>
-                                <p>
-                                    Sou contador de formação, com atuação especializada na gestão dos setores de Recursos Humanos e Departamento Pessoal. 
-                                    Minha experiência abrange desde a administração de processos contábeis e fiscais até a liderança de iniciativas estratégicas de RH, 
-                                    como recrutamento, gestão de benefícios, folha de pagamento, conformidade trabalhista e desenvolvimento organizacional. 
-                                    Essa combinação de conhecimentos me permite agrupar a gestão de pessoas às melhores práticas financeiras e legais, promovendo 
-                                    soluções completas para o crescimento e sustentabilidade
-                                </p>
-                                <span class="baixo-esquerda"></span>
-                            </section>
-
-                            <section>
-                                <span class="topo-direita"></span>
-                                <h2>&#127942; Cusos e Habilidades</h2>
-                                <ul>
-                                    <li>Contabilidade &#10003;</li>
-                                    <li>Gestão de Recursos Humanos &#10003;</li> 
-                                    <li>Departamento Pessoal &#10003;</li>
-                                    <li>Recrutamento e Seleção &#10003;</li>
-                                    <li>Benefícios &#10003;</li>
-                                    <li>Conformidade Trabalhista &#10003;</li>
-                                    <li>Desenvolvimento Organizacional &#10003;</li>
-                                    <li>Administração e logística &#10003;</li>
-                                   
-                                    <li>Secretariado &#10003;</li>
-                                    <li>Excel &#10003;</li>
-                                    <li>Word &#10003;</li>   
-                                    <li>Power Point &#10003;</li>    
-                                    
-                                    <li>Gestão em Marketing &#10003;</li>
-                                    <li>Photoshop &#10003;</li>
-                                    <li>Corel Draw &#10003;</li>
-
-                                    <li>Programação &#10003;</li>    
-                                    
-                                    <li>Informática - Basica e intermediaria &#10003;</li>
-                                    <li>HTML 5 &#10003;</li>
-                                    <li>CSS 3 &#10003;</li>
-                                    <li>Java Script &#10003;</li>
-                                    <li>Python &#10003;</li>
-                                </ul>
-                                <span class="baixo-esquerda"></span>
-                            </section>
-
-                        </div>
-                        
-                        <!-- CONTEÚDO LADO DIREITA -->
-                        <div class="coluna coluna-direita">
-
-                            <section>
-                                <span class="topo-direita"></span>
-                                <h2>&#128188; Principais Experiências</h2>
-                                <ul>
-                                    <li>
-                                        <h3>&#128204;Contador - Gestão de Recursos Humanos & Departamento Pessoal </h3>
-                                        <strong>JOAQUIMCONTAP CONTABILIDADE - Atualmente</strong>
-                                        <li>    
-                                            <p>
-                                                Atualmente, sou responsável pela gestão completa dos setores de Recursos Humanos e Departamento Pessoal, participando desde a atração de talentos até a administração de folha de pagamento, benefícios e conformidade trabalhista. Cuido do desenvolvimento organizacional, implementação de políticas internas e acompanhamento de indicadores para garantir um ambiente de trabalho saudável e produtivo.
-                                            </p>
-                                        </li>
-                                    </li>
-                                    <li>
-                                        <h3>&#128204;RECEPCIONISTA</h3>
-                                        <strong>HOTEL GAROPABA</strong>
-                                        
-                                            <li>
-                                                <p>
-                                                    Atuei na recepção, atendendo e filtrando ligações, anotando recados e recebendo visitas, fazendo o direcionamento de ligações, enviando e controlando de correspondências, prestando apoio na organização.
-                                                </p>
-                                                <p>
-                                                    O Periodo como recepcionista ajudoume a ser um profissional altamente organizado e proativo, com sólida experiência em atendimento ao público e suporte administrativo. Possuo habilidades em gerenciamento de agendas, atendimento telefônico e recepção de visitantes, sempre mantendo um ambiente acolhedor e profissional que reflete positivamente a imagem da empresa.
-                                                </p>
-                                            </li>
-                                    </li>
-                                    <li>
-                                        <h3>&#128204;VENDEDOR</h3>
-                                        <strong>BALI HOUSE</strong>
-                                        <li>
-                                            <p>
-                                                Atuei na atenção aos clientes que entram na loja, negociei prazos e condições de pagamentos, além de possíveis descontos ou pacotes promocionais, vendendo sempre os produtos certos aos clientes certos, propondo-me um plano de melhoria na minha eficácia operacional.
-                                            </p>
-                                            <p>
-                                                Como vendedor me tronei um profissional mais sonoro e orientado a resultados, com ampla experiência em prospecção, negociação e fechamento de vendas. Destaco-me por identificar oportunidades de mercado, oferecer soluções personalizadas aos clientes e superar metas, sempre mantendo uma comunicação clara e ética que fortalece o relacionamento comercial. 
-                                            </p>
-                                         </li>
-                                        </li>
-                                    <li>
-                                        <h3>&#128204;GARÇOM, BARISTA E ATENDENTE</h3>
-                                        <strong>CAFETERIA E CASA DE CHA CARMELA </strong>
-                                        <li>
-                                            <p>
-                                                Atuei na atenção aos clientes que entram-na cafeteria e no preparo de alguns alimentos.
-                                            </p>
-                                            <p>
-                                                Como garçom, barista e atendente, desenvolvi habilidades de comunicação e relacionamento interpessoal, além de conhecimento em técnicas de atendimento e vendas. A experiência me permitiu aprimorar a capacidade de trabalhar em equipe, lidar com situações de pressão e garantir a satisfação dos clientes, sempre com foco na qualidade e excelência no serviço prestado.
-                                            </p>
-                                        </li>
-                                    </li>
-                                </ul>
-                                <span class="baixo-esquerda"></span>
-                            </section>
-
-                            <section>
-                                <span class="topo-direita"></span>
-                                <h2>&#127760;Idiomas</h2>
-                                <ul>
-                                    <li>
-                                        <h3>Espanhol <strong></strong></h3>
-                                        <div class="barra">
-                                            <div class="progress-bar" style="width:100%">Avançado</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <h3>Ingles <strong></strong></h3>
-                                        <div class="barra">
-                                            <div class="progress-bar" style="width:50%">Intermediario</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <h3>Italiano <strong></strong></h3>
-                                        <div class="barra">
-                                            <div class="progress-bar" style="width:50%">Intermediario</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <h3>Libras <strong></strong></h3>
-                                        <div class="barra">
-                                            <div class="progress-bar" style="width:25%">Basico</div>
-                                        </div>
-                                    </li>
-                                    
-                                </ul>
-                                <span class="baixo-esquerda"></span>
-                            </section>
-
-                        </div>
+                            </ul>
+                            <span class="baixo-esquerda"></span>
+                        </section>
 
                     </div>
-                </div>
-
-            </main>
-
-            <footer>
-                <div class="container">
-
-                    <nav>
-                        <ul class="info-contato">
-                            <li>
-                                <a href="mailto:puchetagustin@gmail.com"><strong><span style='font-size:20px;'>&#128231;</span> E-Mail: </strong> puchetagustin@gmail.com</a>
-                            </li>
-                            <li>
-                                <a href="Tel:55048999823436"><strong><span style='font-size:20px;'>&#128241;</span>Tel.:</strong> +55 (048) 9 9982-3436</a>
-                            </li>
-                            
-                        </ul>
-                        </ul>
-                    </nav> 
-                    
-                    <nav>
-                        <ul class="redes-sociais">
-                            <li>
-                                <a href="https://www.linkedin.com/in/ignacio-pucheta-13425b20a/">
-                                    <img src="./assets/img/linkedin.svg" alt="Linkedin">
-                                    <p>Linkedin</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/ignaciopucheta">
-                                    <img src="./assets/img/github-big-logo.svg" alt="Github">
-                                    <p>Github</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/sr_iggy/">
-                                    <img src="./assets/img/instagram.svg" alt="Instagram">
-                                    <p>Instagram</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.facebook.com/iapucheta/">
-                                    <img src="./assets/img/facebook-app-symbol.svg" alt="Facebook">
-                                    <p>Facebook</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
 
                 </div>
-            </footer>
-        </div>
-        <!--Link com  o arquivo js-->
-        <script src="/assets/js/script.js"></script>
-    </body>
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="container">
+
+                <nav>
+                    <ul class="info-contato">
+                        <li>
+                            <a href="mailto:puchetagustin@icloud.com"><strong><span
+                                        style='font-size:20px;'>&#128231;</span> E-Mail: </strong>
+                                puchetagustin@icloud.com</a>
+                        </li>
+                        <li>
+                            <a href="Tel:55048999823436"><strong><span
+                                        style='font-size:20px;'>&#128241;</span>Tel.:</strong> +55 (048) 9 9982-3436</a>
+                        </li>
+
+                    </ul>
+                    </ul>
+                </nav>
+
+                <nav>
+                    <ul class="redes-sociais">
+                        <li>
+                            <a href="https://www.linkedin.com/in/ignacio-pucheta-13425b20a/">
+                                <img src="./assets/img/linkedin.svg" alt="Linkedin">
+                                <p>Linkedin</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ignaciopucheta">
+                                <img src="./assets/img/github-big-logo.svg" alt="Github">
+                                <p>Github</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/sr_iggy/">
+                                <img src="./assets/img/instagram.svg" alt="Instagram">
+                                <p>Instagram</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/iapucheta/">
+                                <img src="./assets/img/facebook-app-symbol.svg" alt="Facebook">
+                                <p>Facebook</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </footer>
+    </div>
+    <!--Link com  o arquivo js-->
+    <script src="/assets/js/script.js"></script>
+</body>
+
 </html>
