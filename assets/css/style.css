@@ -257,6 +257,24 @@ main .coluna section ul li strong {
     display: inline-block;
 }
 
+.link-iap {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.3);
+    text-underline-offset: 2px;
+    font-weight: 600;
+    transition: color .2s ease;
+}
+
+.link-iap:hover {
+    color: var(--corTextPrimaria);
+    text-decoration-color: currentColor;
+}
+
+.ativar-dark:checked~.dark-mode .link-iap {
+    text-decoration-color: rgba(158, 219, 78, 0.4);
+}
+
 /* Grade de duas colunas para as certificações */
 main .coluna section ul .lista-certificacoes {
     display: grid;
