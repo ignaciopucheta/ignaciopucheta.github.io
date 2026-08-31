@@ -14,6 +14,11 @@
     <!--Link com  o arquivo css-->
     <link rel="stylesheet" href="./assets/css/style.css">
 
+    <!-- Umami Analytics (privacidade em primeiro lugar, sem cookies) -->
+    <!-- Troque SEU_WEBSITE_ID pelo ID que o Umami te deu ao cadastrar o site -->
+    <script defer src="https://cloud.umami.is/script.js"
+        data-website-id="e091e3d4-8d47-45d7-afaf-0471bbdf8871"></script>
+
 </head>
 
 <body>
@@ -36,7 +41,8 @@
                         peço apenas que ele seja enviado por e-mail.</p>
                     <p class="modal-assinatura">Obrigado pela visita! 👊✌️</p>
                     <div class="modal-acoes">
-                        <button class="modal-btn modal-btn-primario" id="btnAbrirFeedback">Enviar feedback</button>
+                        <button class="modal-btn modal-btn-primario" id="btnAbrirFeedback"
+                            data-umami-event="Feedback - Botão Modal">Enviar feedback</button>
                         <button class="modal-btn modal-btn-secundario" id="modalFecharBtn">Fechar</button>
                     </div>
                 </div>
@@ -377,7 +383,8 @@
                         </li>
 
                     </ul>
-                    <button type="button" class="footer-feedback-btn" id="btnFeedbackFooter">&#128172; Enviar
+                    <button type="button" class="footer-feedback-btn" id="btnFeedbackFooter"
+                        data-umami-event="Feedback - Botão Rodapé">&#128172; Enviar
                         Feedback</button>
                 </nav>
 

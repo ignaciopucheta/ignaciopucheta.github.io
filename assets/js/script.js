@@ -80,6 +80,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 feedbackStatus.textContent = 'Obrigado! Sua mensagem foi enviada com sucesso. 🙌';
                 feedbackStatus.classList.add('sucesso');
                 formFeedback.reset();
+                if (window.umami) {
+                    window.umami.track('Feedback - Enviado com sucesso');
+                }
             } else {
                 feedbackStatus.textContent = 'Não foi possível enviar agora. Tente novamente em instantes.';
                 feedbackStatus.classList.add('erro');
