@@ -44,15 +44,17 @@
                 <!-- TELA 2: FORMULÁRIO DE FEEDBACK -->
                 <div class="modal-tela modal-tela-oculta" id="telaFeedback">
                     <h2>Deixe seu feedback</h2>
-                    <p class="modal-subtitulo">Sua opinião me ajuda a melhorar. Preencha abaixo e envie direto por aqui.
-                    </p>
+                    <p class="modal-subtitulo">Sua opinião me ajuda a melhorar. Preencha abaixo e envie direto por
+                        aqui.</p>
 
                     <form id="formFeedback" action="https://formspree.io/f/mdeoaalr" method="POST">
-                        <label for="feedbackEmail">E-mail <span class="obrigatorio">(obrigatório)</span></label>
-                        <input type="email" id="feedbackEmail" name="email" required>
+                        <label class="form-label" for="feedbackEmail">E-mail <span
+                                class="obrigatorio">(obrigatório)</span></label>
+                        <input type="email" id="feedbackEmail" name="email" placeholder="seu@email.com" required>
 
-                        <label for="feedbackMensagem">Mensagem</label>
-                        <textarea id="feedbackMensagem" name="mensagem" rows="4" required></textarea>
+                        <label class="form-label" for="feedbackMensagem">Mensagem</label>
+                        <textarea id="feedbackMensagem" name="mensagem" rows="4"
+                            placeholder="Escreva sua mensagem aqui..." required></textarea>
 
                         <div class="modal-acoes">
                             <button type="submit" class="modal-btn modal-btn-primario"
@@ -72,7 +74,7 @@
         <header>
 
             <div class="container">
-                <label for="ativar-dark">
+                <label for="ativar-dark" class="toggle-dark-label">
                     <span>
                         <div class="lua"></div>
                     </span></label>
@@ -309,7 +311,6 @@
                                     </ul>
                                 </li>
                                 </li>
-                                </li>
                             </ul>
                             <span class="baixo-esquerda"></span>
                         </section>
@@ -412,7 +413,7 @@
         </footer>
     </div>
     <!--Link com  o arquivo js-->
-    <script src="/assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

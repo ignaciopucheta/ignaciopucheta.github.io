@@ -26,26 +26,35 @@ document.addEventListener('DOMContentLoaded', function () {
         tela.classList.remove('modal-tela-oculta');
     }
 
+    // pequena espera para a animação de entrada ficar suave
     setTimeout(abrirModal, 300);
 
     btnFecharX.addEventListener('click', fecharModal);
     btnFechar.addEventListener('click', fecharModal);
+
     btnAbrirFeedback.addEventListener('click', function () {
         mostrarTela(telaFeedback);
     });
+
     btnVoltarFeedback.addEventListener('click', function () {
         mostrarTela(telaBoasVindas);
     });
 
+    // fecha clicando fora da caixa (no fundo escuro)
     overlay.addEventListener('click', function (evento) {
-        if (evento.target === overlay) fecharModal();
+        if (evento.target === overlay) {
+            fecharModal();
+        }
     });
 
+    // fecha com a tecla Esc
     document.addEventListener('keydown', function (evento) {
-        if (evento.key === 'Escape' && overlay.classList.contains('modal-visivel')) fecharModal();
+        if (evento.key === 'Escape' && overlay.classList.contains('modal-visivel')) {
+            fecharModal();
+        }
     });
 
-    // Envio do formulário sem sair da página
+    // envio do formulário de feedback sem sair da página
     formFeedback.addEventListener('submit', async function (evento) {
         evento.preventDefault();
         btnEnviarFeedback.disabled = true;

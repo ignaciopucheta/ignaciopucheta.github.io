@@ -8,6 +8,7 @@ ESTRUTURA BASE
 **** HEADER
 **** FOOTER
 **** PÁGINA INICIAL
+**** MODAL DE BOAS-VINDAS / FEEDBACK
 **** EXTRAS
 **** @MEDIA
 
@@ -228,6 +229,237 @@ main .coluna section ul li strong {
     display: inline-block;
 }
 
+/* Grade de duas colunas para as certificações */
+main .coluna section ul .lista-certificacoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 20px;
+    margin: 8px 0 0;
+}
+
+main .coluna section ul .lista-certificacoes li {
+    margin: 0 0 4px;
+    font-size: 0.9rem;
+    color: var(--corTextPrimaria);
+}
+
+
+/* MODAL DE BOAS-VINDAS / FEEDBACK */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+}
+
+.modal-overlay.modal-visivel {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    position: relative;
+    background-color: #ffffff;
+    color: var(--corTextPrimaria);
+    max-width: 480px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 36px 32px;
+    border-radius: 18px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transform: scale(0.85) translateY(20px);
+    opacity: 0;
+    transition: transform .35s cubic-bezier(.2, .8, .2, 1), opacity .35s ease;
+}
+
+.modal-overlay.modal-visivel .modal-box {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.modal-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.modal-box h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+}
+
+.modal-box p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+    text-align: left;
+    text-indent: 0;
+}
+
+.modal-assinatura {
+    font-weight: 600;
+    text-align: center !important;
+}
+
+.modal-subtitulo {
+    font-size: 0.9rem;
+    color: #6b6b6b;
+    margin-bottom: 8px;
+    text-align: left !important;
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--corTextPrimaria);
+    border-radius: 50%;
+    transition: background-color .2s ease;
+}
+
+.modal-fechar:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.modal-acoes {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 22px;
+    flex-wrap: wrap;
+}
+
+.modal-btn {
+    padding: 11px 24px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    cursor: pointer;
+    border: 2px solid var(--corBackgroundSecundaria);
+    transition: all .2s ease;
+}
+
+.modal-btn-primario {
+    background-color: var(--corBackgroundSecundaria);
+    color: white;
+}
+
+.modal-btn-primario:hover {
+    opacity: .85;
+}
+
+.modal-btn-primario:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.modal-btn-secundario {
+    background-color: transparent;
+    color: var(--corTextPrimaria);
+}
+
+.modal-btn-secundario:hover {
+    background-color: var(--corBackgroundSecundaria);
+    color: white;
+}
+
+/* Telas dentro do modal (boas-vindas <-> formulário) */
+.modal-tela-oculta {
+    display: none;
+}
+
+/* Formulário de feedback */
+#formFeedback {
+    text-align: left;
+    margin-top: 4px;
+}
+
+#formFeedback label.form-label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    margin: 16px 0 6px;
+    color: var(--corTextPrimaria);
+}
+
+#formFeedback label.form-label .obrigatorio {
+    font-weight: 400;
+    text-transform: none;
+    color: #9a9a9a;
+    font-size: 0.75rem;
+    letter-spacing: normal;
+}
+
+#formFeedback input[type="email"],
+#formFeedback textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--corTextPrimaria);
+    background-color: #fafafa;
+    transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+#formFeedback input[type="email"]::placeholder,
+#formFeedback textarea::placeholder {
+    color: #b0b0b0;
+}
+
+#formFeedback input[type="email"]:focus,
+#formFeedback textarea:focus {
+    outline: none;
+    border-color: var(--corBackgroundSecundaria);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.07);
+}
+
+#formFeedback textarea {
+    resize: vertical;
+    min-height: 110px;
+    line-height: 1.5;
+}
+
+.modal-status {
+    margin-top: 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    min-height: 1.2em;
+}
+
+.modal-status.sucesso {
+    color: #1a8f3d;
+}
+
+.modal-status.erro {
+    color: #c0392b;
+}
+
 
 /* EXTRAS */
 .ativar-dark {
@@ -240,7 +472,7 @@ header .container {
     position: relative;
 }
 
-label {
+label.toggle-dark-label {
     position: absolute;
     top: 30px;
     right: 30px;
@@ -253,7 +485,7 @@ label {
     cursor: pointer;
 }
 
-label span {
+label.toggle-dark-label span {
     width: 20px;
     height: 20px;
     display: block;
@@ -263,11 +495,11 @@ label span {
     border: dashed;
 }
 
-.ativar-dark:checked~.dark-mode label {
+.ativar-dark:checked~.dark-mode label.toggle-dark-label {
     background-color: var(--corTextPrimaria);
 }
 
-.ativar-dark:checked~.dark-mode label span {
+.ativar-dark:checked~.dark-mode label.toggle-dark-label span {
     background-color: var(--corBackgroundSecundaria);
     /* margin-left: 21px; */
     transform: translateX(21px);
@@ -329,147 +561,23 @@ label span {
     color: var(--corTextPrimaria);
 }
 
-@keyframes aumentarLargura {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes aumentarAltura {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 100%;
-    }
-}
-
-/* MODAL DE BOAS-VINDAS */
-.modal-overlay {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.65);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    z-index: 9999;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .3s ease, visibility .3s ease;
-}
-
-.modal-overlay.modal-visivel {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-box {
-    position: relative;
-    background-color: #ffffff;
-    color: var(--corTextPrimaria);
-    max-width: 480px;
-    width: 100%;
-    padding: 32px 28px;
-    border-radius: 16px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-    text-align: center;
-    transform: scale(0.85) translateY(20px);
-    opacity: 0;
-    transition: transform .35s cubic-bezier(.2, .8, .2, 1), opacity .35s ease;
-}
-
-.modal-overlay.modal-visivel .modal-box {
-    transform: scale(1) translateY(0);
-    opacity: 1;
-}
-
-.modal-emoji {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.modal-box h2 {
-    font-family: 'Libre Baskerville', serif;
-    font-style: italic;
-    font-size: 1.4rem;
-    margin-bottom: 16px;
-}
-
-.modal-box p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 14px;
-    text-align: left;
-    text-indent: 0;
-}
-
-.modal-assinatura {
-    font-weight: 600;
-    text-align: center !important;
-}
-
-.modal-fechar {
-    position: absolute;
-    top: 12px;
-    right: 16px;
-    background: none;
-    border: none;
-    font-size: 1.6rem;
-    line-height: 1;
-    cursor: pointer;
-    color: var(--corTextPrimaria);
-}
-
-.modal-acoes {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-.modal-btn {
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    border: 2px solid var(--corBackgroundSecundaria);
-    transition: all .2s ease;
-}
-
-.modal-btn-primario {
-    background-color: var(--corBackgroundSecundaria);
-    color: white;
-}
-
-.modal-btn-primario:hover {
-    opacity: .85;
-}
-
-.modal-btn-secundario {
-    background-color: transparent;
-    color: var(--corTextPrimaria);
-}
-
-.modal-btn-secundario:hover {
-    background-color: var(--corBackgroundSecundaria);
-    color: white;
-}
-
+/* Modal em modo escuro */
 .ativar-dark:checked~.dark-mode .modal-box {
     background-color: var(--corBackgroundDark);
     color: var(--corTextoSecudaria);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.75);
 }
 
 .ativar-dark:checked~.dark-mode .modal-fechar {
     color: var(--corTextoSecudaria);
+}
+
+.ativar-dark:checked~.dark-mode .modal-fechar:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.ativar-dark:checked~.dark-mode .modal-subtitulo {
+    color: #9a9a9a;
 }
 
 .ativar-dark:checked~.dark-mode .modal-btn {
@@ -490,77 +598,45 @@ label span {
     color: #000;
 }
 
-@media only screen and (max-width: 480px) {
-    .modal-acoes {
-        flex-direction: column;
+.ativar-dark:checked~.dark-mode #formFeedback label.form-label {
+    color: var(--corTextoSecudaria);
+}
+
+.ativar-dark:checked~.dark-mode #formFeedback input[type="email"],
+.ativar-dark:checked~.dark-mode #formFeedback textarea {
+    background-color: #1c1c1c;
+    border-color: #3a3a3a;
+    color: var(--corTextoSecudaria);
+}
+
+.ativar-dark:checked~.dark-mode #formFeedback input[type="email"]:focus,
+.ativar-dark:checked~.dark-mode #formFeedback textarea:focus {
+    border-color: var(--corTextPrimaria);
+    background-color: #000;
+    box-shadow: 0 0 0 3px rgba(112, 192, 7, 0.15);
+}
+
+@keyframes aumentarLargura {
+    from {
+        width: 0;
     }
 
-    .modal-btn {
+    to {
         width: 100%;
     }
 }
 
-.modal-tela-oculta {
-    display: none;
+@keyframes aumentarAltura {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
 }
 
-.modal-subtitulo {
-    font-size: 0.9rem;
-    color: var(--corTextPrimaria);
-    margin-bottom: 16px;
-    text-align: left;
-}
 
-#formFeedback label {
-    display: block;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin: 12px 0 6px;
-    text-align: left;
-}
-
-#formFeedback .obrigatorio {
-    font-weight: 400;
-    color: #888;
-}
-
-#formFeedback input,
-#formFeedback textarea {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 0.9rem;
-    resize: vertical;
-}
-
-#formFeedback input:focus,
-#formFeedback textarea:focus {
-    outline: none;
-    border-color: var(--corBackgroundSecundaria);
-}
-
-.modal-status {
-    margin-top: 12px;
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
-.modal-status.sucesso {
-    color: #1a8f3d;
-}
-
-.modal-status.erro {
-    color: #c0392b;
-}
-
-.ativar-dark:checked~.dark-mode #formFeedback input,
-.ativar-dark:checked~.dark-mode #formFeedback textarea {
-    background-color: #1c1c1c;
-    border-color: #444;
-    color: var(--corTextoSecudaria);
-}
 
 /* @MEDIA */
 @media only screen and (min-width: 768px) {
@@ -633,25 +709,6 @@ label span {
         border-left-color: lightgrey;
     }
 
-    main .coluna section ul .lista-certificacoes {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4px 20px;
-        margin: 8px 0 0;
-    }
-
-    main .coluna section ul .lista-certificacoes li {
-        margin: 0 0 4px;
-        font-size: 0.9rem;
-        color: var(--corTextPrimaria);
-    }
-
-    @media only screen and (max-width: 767px) {
-        main .coluna section ul .lista-certificacoes {
-            grid-template-columns: 1fr;
-        }
-    }
-
     main .coluna {
         padding: 0;
     }
@@ -668,5 +725,15 @@ label span {
 
     header .coluna-direita {
         flex-basis: 70%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .modal-acoes {
+        flex-direction: column;
+    }
+
+    .modal-btn {
+        width: 100%;
     }
 }
