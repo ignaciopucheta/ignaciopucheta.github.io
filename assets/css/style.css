@@ -148,6 +148,34 @@ footer nav .info-contato li {
     margin: 0 0 15px;
 }
 
+.footer-topo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.footer-feedback-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    transition: all .2s ease;
+}
+
+.footer-feedback-btn:hover {
+    background-color: white;
+    color: #000;
+}
+
 footer nav .redes-sociais {
     border-top: 1px solid rgb(255 255 255 / 20%);
     margin: 20px 0 50px;
@@ -650,6 +678,12 @@ label.toggle-dark-label span {
     footer nav .redes-sociais {
         display: flex;
         justify-content: center;
+    }
+
+    .footer-topo {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 
     header {

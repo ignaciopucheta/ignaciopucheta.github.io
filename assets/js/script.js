@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const formFeedback = document.getElementById('formFeedback');
     const feedbackStatus = document.getElementById('feedbackStatus');
     const btnEnviarFeedback = document.getElementById('btnEnviarFeedback');
+    const btnFeedbackFooter = document.getElementById('btnFeedbackFooter');
 
     function abrirModal() {
         document.body.style.overflow = 'hidden';
@@ -38,6 +39,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     btnVoltarFeedback.addEventListener('click', function () {
         mostrarTela(telaBoasVindas);
+    });
+
+    // botão "Enviar Feedback" no rodapé: abre o modal já na tela do formulário
+    btnFeedbackFooter.addEventListener('click', function () {
+        mostrarTela(telaFeedback);
+        abrirModal();
     });
 
     // fecha clicando fora da caixa (no fundo escuro)
