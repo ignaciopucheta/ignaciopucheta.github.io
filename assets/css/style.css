@@ -737,6 +737,7 @@ label.toggle-dark-label span {
         width: 0;
         height: 0;
         border: 2px solid transparent;
+        pointer-events: none;
     }
 
     main .coluna section .topo-direita {
