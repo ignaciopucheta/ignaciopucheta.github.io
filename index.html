@@ -25,16 +25,44 @@
         <div class="modal-overlay" id="modalOverlay">
             <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
                 <button class="modal-fechar" id="modalFechar" aria-label="Fechar">&times;</button>
-                <div class="modal-emoji">🏖️</div>
-                <h2 id="modalTitulo">Bem-vindo(a)!</h2>
-                <p>Você está acessando o meu portfólio, desenvolvido e atualizado por mim. Este espaço reúne um pouco da
-                    minha trajetória, dos projetos que desenvolvi e da forma como trabalho.</p>
-                <p>Toda crítica, sugestão ou comentário é muito bem-vindo. Se desejar compartilhar seu feedback, peço
-                    apenas que ele seja enviado por e-mail.</p>
-                <p class="modal-assinatura">Obrigado pela visita! 👊✌️</p>
-                <div class="modal-acoes">
-                    <a href="mailto:puchetagustin@icloud.com" class="modal-btn modal-btn-primario">Enviar feedback</a>
-                    <button class="modal-btn modal-btn-secundario" id="modalFecharBtn">Fechar</button>
+
+                <!-- TELA 1: BOAS-VINDAS -->
+                <div class="modal-tela" id="telaBoasVindas">
+                    <div class="modal-emoji">🏖️</div>
+                    <h2 id="modalTitulo">Bem-vindo(a)!</h2>
+                    <p>Você está acessando o meu portfólio, desenvolvido e atualizado por mim. Este espaço reúne um
+                        pouco da minha trajetória, dos projetos que desenvolvi e da forma como trabalho.</p>
+                    <p>Toda crítica, sugestão ou comentário é muito bem-vindo. Se desejar compartilhar seu feedback,
+                        peço apenas que ele seja enviado por e-mail.</p>
+                    <p class="modal-assinatura">Obrigado pela visita! 👊✌️</p>
+                    <div class="modal-acoes">
+                        <button class="modal-btn modal-btn-primario" id="btnAbrirFeedback">Enviar feedback</button>
+                        <button class="modal-btn modal-btn-secundario" id="modalFecharBtn">Fechar</button>
+                    </div>
+                </div>
+
+                <!-- TELA 2: FORMULÁRIO DE FEEDBACK -->
+                <div class="modal-tela modal-tela-oculta" id="telaFeedback">
+                    <h2>Deixe seu feedback</h2>
+                    <p class="modal-subtitulo">Sua opinião me ajuda a melhorar. Preencha abaixo e envie direto por aqui.
+                    </p>
+
+                    <form id="formFeedback" action="https://formspree.io/f/mdeoaalr" method="POST">
+                        <label for="feedbackEmail">E-mail <span class="obrigatorio">(obrigatório)</span></label>
+                        <input type="email" id="feedbackEmail" name="email" required>
+
+                        <label for="feedbackMensagem">Mensagem</label>
+                        <textarea id="feedbackMensagem" name="mensagem" rows="4" required></textarea>
+
+                        <div class="modal-acoes">
+                            <button type="submit" class="modal-btn modal-btn-primario"
+                                id="btnEnviarFeedback">Enviar</button>
+                            <button type="button" class="modal-btn modal-btn-secundario"
+                                id="btnVoltarFeedback">Voltar</button>
+                        </div>
+                    </form>
+
+                    <p class="modal-status" id="feedbackStatus"></p>
                 </div>
             </div>
         </div>
@@ -138,30 +166,30 @@
                             <span class="topo-direita"></span>
                             <h2>&#127942; Cusos e Habilidades</h2>
                             <ul>
-                                <li>Contabilidade &#10003;</li>
-                                <li>Gestão de Recursos Humanos &#10003;</li>
-                                <li>Departamento Pessoal &#10003;</li>
-                                <li>Recrutamento e Seleção &#10003;</li>
-                                <li>Conformidade Trabalhista &#10003;</li>
-                                <li>Desenvolvimento Organizacional &#10003;</li>
-                                <li>Administração e logística &#10003;</li>
+                                <li>&#10003; Contabilidade </li>
+                                <li>&#10003; Gestão de Recursos Humanos </li>
+                                <li>&#10003; Departamento Pessoal </li>
+                                <li>&#10003; Recrutamento e Seleção </li>
+                                <li>&#10003; Conformidade Trabalhista </li>
+                                <li>&#10003; Desenvolvimento Organizacional </li>
+                                <li>&#10003; Administração e logística </li>
 
-                                <li>Secretariado &#10003;</li>
-                                <li>Excel &#10003;</li>
-                                <li>Word &#10003;</li>
-                                <li>Power Point &#10003;</li>
+                                <li>&#10003; Secretariado </li>
+                                <li>&#10003; Excel </li>
+                                <li>&#10003; Word </li>
+                                <li>&#10003; Power Point </li>
 
-                                <li>Gestão em Marketing &#10003;</li>
-                                <li>Photoshop &#10003;</li>
-                                <li>Corel Draw &#10003;</li>
+                                <li>&#10003; Gestão em Marketing </li>
+                                <li>&#10003; Photoshop </li>
+                                <li>&#10003; Corel Draw </li>
 
-                                <li>Programação &#10003;</li>
+                                <li>&#10003; Programação </li>
 
-                                <li>Informática - Basica e intermediaria &#10003;</li>
-                                <li>HTML 5 &#10003;</li>
-                                <li>CSS 3 &#10003;</li>
-                                <li>Java Script &#10003;</li>
-                                <li>Python &#10003;</li>
+                                <li>&#10003; Informática - Basica e intermediaria </li>
+                                <li>&#10003; HTML 5 </li>
+                                <li>&#10003; CSS 3 </li>
+                                <li>&#10003; Java Script </li>
+                                <li>&#10003; Python </li>
                             </ul>
                             <span class="baixo-esquerda"></span>
                         </section>
@@ -170,16 +198,16 @@
                             <span class="topo-direita"></span>
                             <h2>&#127919; Atividades e Interesses</h2>
                             <ul>
-                                <li>Comércio Exterior &#10003;</li>
-                                <li>Internacionalização de Empresas &#10003;</li>
-                                <li>Automação Empresarial &#10003;</li>
-                                <li>Impressão 3D &#10003;</li>
-                                <li>Investimentos &#10003;</li>
-                                <li>Empreendedorismo &#10003;</li>
-                                <li>Idiomas e Culturas Internacionais &#10003;</li>
-                                <li>Tecnologia &#10003;</li>
-                                <li>Escotismo &#10003;</li>
-                                <li>Voluntariado &#10003;</li>
+                                <li>&#10003; Comércio Exterior </li>
+                                <li>&#10003; Internacionalização de Empresas </li>
+                                <li>&#10003; Automação Empresarial </li>
+                                <li>&#10003; Impressão 3D </li>
+                                <li>&#10003; Investimentos </li>
+                                <li>&#10003; Empreendedorismo </li>
+                                <li>&#10003; Idiomas e Culturas Internacionais</li>
+                                <li>&#10003; Tecnologia </li>
+                                <li>&#10003; Escotismo </li>
+                                <li>&#10003; Voluntariado </li>
                             </ul>
                             <span class="baixo-esquerda"></span>
                         </section>

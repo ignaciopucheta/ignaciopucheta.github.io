@@ -2,6 +2,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const overlay = document.getElementById('modalOverlay');
     const btnFecharX = document.getElementById('modalFechar');
     const btnFechar = document.getElementById('modalFecharBtn');
+    const telaBoasVindas = document.getElementById('telaBoasVindas');
+    const telaFeedback = document.getElementById('telaFeedback');
+    const btnAbrirFeedback = document.getElementById('btnAbrirFeedback');
+    const btnVoltarFeedback = document.getElementById('btnVoltarFeedback');
+    const formFeedback = document.getElementById('formFeedback');
+    const feedbackStatus = document.getElementById('feedbackStatus');
+    const btnEnviarFeedback = document.getElementById('btnEnviarFeedback');
 
     function abrirModal() {
         document.body.style.overflow = 'hidden';
@@ -13,23 +20,60 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = '';
     }
 
-    // pequena espera para a animação de entrada ficar suave
+    function mostrarTela(tela) {
+        telaBoasVindas.classList.add('modal-tela-oculta');
+        telaFeedback.classList.add('modal-tela-oculta');
+        tela.classList.remove('modal-tela-oculta');
+    }
+
     setTimeout(abrirModal, 300);
 
     btnFecharX.addEventListener('click', fecharModal);
     btnFechar.addEventListener('click', fecharModal);
-
-    // fecha também clicando fora da caixa (no fundo escuro)
-    overlay.addEventListener('click', function (evento) {
-        if (evento.target === overlay) {
-            fecharModal();
-        }
+    btnAbrirFeedback.addEventListener('click', function () {
+        mostrarTela(telaFeedback);
+    });
+    btnVoltarFeedback.addEventListener('click', function () {
+        mostrarTela(telaBoasVindas);
     });
 
-    // fecha com a tecla Esc
+    overlay.addEventListener('click', function (evento) {
+        if (evento.target === overlay) fecharModal();
+    });
+
     document.addEventListener('keydown', function (evento) {
-        if (evento.key === 'Escape' && overlay.classList.contains('modal-visivel')) {
-            fecharModal();
+        if (evento.key === 'Escape' && overlay.classList.contains('modal-visivel')) fecharModal();
+    });
+
+    // Envio do formulário sem sair da página
+    formFeedback.addEventListener('submit', async function (evento) {
+        evento.preventDefault();
+        btnEnviarFeedback.disabled = true;
+        btnEnviarFeedback.textContent = 'Enviando...';
+        feedbackStatus.textContent = '';
+        feedbackStatus.className = 'modal-status';
+
+        try {
+            const resposta = await fetch(formFeedback.action, {
+                method: 'POST',
+                body: new FormData(formFeedback),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (resposta.ok) {
+                feedbackStatus.textContent = 'Obrigado! Sua mensagem foi enviada com sucesso. 🙌';
+                feedbackStatus.classList.add('sucesso');
+                formFeedback.reset();
+            } else {
+                feedbackStatus.textContent = 'Não foi possível enviar agora. Tente novamente em instantes.';
+                feedbackStatus.classList.add('erro');
+            }
+        } catch (erro) {
+            feedbackStatus.textContent = 'Erro de conexão. Verifique sua internet e tente novamente.';
+            feedbackStatus.classList.add('erro');
+        } finally {
+            btnEnviarFeedback.disabled = false;
+            btnEnviarFeedback.textContent = 'Enviar';
         }
     });
 });

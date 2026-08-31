@@ -500,7 +500,67 @@ label span {
     }
 }
 
+.modal-tela-oculta {
+    display: none;
+}
 
+.modal-subtitulo {
+    font-size: 0.9rem;
+    color: var(--corTextPrimaria);
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+#formFeedback label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 12px 0 6px;
+    text-align: left;
+}
+
+#formFeedback .obrigatorio {
+    font-weight: 400;
+    color: #888;
+}
+
+#formFeedback input,
+#formFeedback textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    resize: vertical;
+}
+
+#formFeedback input:focus,
+#formFeedback textarea:focus {
+    outline: none;
+    border-color: var(--corBackgroundSecundaria);
+}
+
+.modal-status {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.modal-status.sucesso {
+    color: #1a8f3d;
+}
+
+.modal-status.erro {
+    color: #c0392b;
+}
+
+.ativar-dark:checked~.dark-mode #formFeedback input,
+.ativar-dark:checked~.dark-mode #formFeedback textarea {
+    background-color: #1c1c1c;
+    border-color: #444;
+    color: var(--corTextoSecudaria);
+}
 
 /* @MEDIA */
 @media only screen and (min-width: 768px) {
